@@ -352,6 +352,8 @@ export default {
 
   // Replacement word management page related
   'replacementWordManagement.pageTitle': 'Quản lý từ thay thế',
+  'replacementWordManagement.searchPlaceholder': 'Vui lòng nhập tên tệp để tìm kiếm',
+  'replacementWordManagement.search': 'Tìm kiếm',
   'replacementWordManagement.fileName': 'Tên tệp',
   'replacementWordManagement.replacementWordCount': 'Số lượng từ thay thế',
   'replacementWordManagement.replacementWordContent': 'Nội dung từ thay thế',
@@ -591,6 +593,7 @@ export default {
 
   // Dictionary management page text
   'dictManagement.pageTitle': 'Quản lý từ điển',
+  'dictManagement.dictTypeCategory': 'Danh mục từ điển',
   'dictManagement.searchPlaceholder': 'Vui lòng nhập nhãn giá trị từ điển để tìm kiếm',
   'dictManagement.search': 'Tìm kiếm',
   'dictManagement.dictTypeName': 'Tên loại từ điển',
@@ -645,6 +648,8 @@ export default {
   'user.disable': 'Vô hiệu hóa',
   'user.delete': 'Xóa',
   'user.selectUsersFirst': 'Vui lòng chọn người dùng để xóa trước',
+  'user.selectUsersToDisable': 'Vui lòng chọn người dùng để vô hiệu hóa',
+  'user.selectUsersToEnable': 'Vui lòng chọn người dùng để kích hoạt',
   'user.confirmDeleteSelected': 'Bạn có chắc chắn muốn xóa {count} người dùng đã chọn?',
   'user.deleting': 'Đang xóa...',
   'user.deleteSuccess': 'Đã xóa thành công {count} người dùng',
@@ -704,6 +709,9 @@ export default {
   'common.cancel': 'Hủy bỏ',
   'common.sensitive': 'Nhạy cảm',
   'common.loading': 'Đang tải',
+  'common.copySuccess': 'Sao chép thành công',
+  'common.copyFailed': 'Sao chép thất bại',
+  'common.copyAddress': 'Sao chép địa chỉ',
 
   // Language switch
   'language.zhCN': '中文简体',
@@ -1116,6 +1124,8 @@ export default {
   'agentTemplateManagement.action': 'Hành động',
   'agentTemplateManagement.createTemplate': 'Tạo mẫu',
   'templateQuickConfig.newTemplate': 'Mẫu mới',
+  'templateQuickConfig.editTemplate': 'Chỉnh sửa mẫu',
+  'templateQuickConfig.addTemplate': 'Thêm mẫu',
   'agentTemplateManagement.editTemplate': 'Chỉnh sửa mẫu',
   'agentTemplateManagement.deleteTemplate': 'Xóa mẫu',
   'agentTemplateManagement.deleteSuccess': 'Đã xóa mẫu thành công',
@@ -1420,8 +1430,6 @@ export default {
   'featureManagement.groupDescription.featureManagement': 'Kiểm soát trạng thái kích hoạt của các mô-đun tính năng cốt lõi',
   'featureManagement.groupDescription.voiceManagement': 'Cấu hình các tính năng hiển thị và khả dụng cho agent (trợ lý AI)',
   'featureManagement.moduleCount': 'Tổng cộng {count} mô-đun',
-  'featureManagement.enabled': 'Đã bật',
-  'featureManagement.disabled': 'Chưa bật',
 
   // Feature names and descriptions
   'feature.voiceprintRecognition.name': 'Nhận dạng giọng nói',

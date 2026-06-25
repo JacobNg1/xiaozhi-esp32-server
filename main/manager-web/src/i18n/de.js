@@ -352,6 +352,8 @@ export default {
 
   // Replacement word management page related
   'replacementWordManagement.pageTitle': 'Ersetzungswortverwaltung',
+  'replacementWordManagement.searchPlaceholder': 'Bitte geben Sie den Dateinamen zur Suche ein',
+  'replacementWordManagement.search': 'Suchen',
   'replacementWordManagement.fileName': 'Dateiname',
   'replacementWordManagement.replacementWordCount': 'Anzahl der Ersetzungswörter',
   'replacementWordManagement.replacementWordContent': 'Ersetzungswortinhalt',
@@ -591,6 +593,7 @@ export default {
 
   // Dictionary management page text
   'dictManagement.pageTitle': 'Wörterbuchverwaltung',
+  'dictManagement.dictTypeCategory': 'Wörterbuchkategorie',
   'dictManagement.searchPlaceholder': 'Bitte Wörterbuchwert-Label zur Suche eingeben',
   'dictManagement.search': 'Suchen',
   'dictManagement.dictTypeName': 'WDT-Name',
@@ -645,6 +648,8 @@ export default {
   'user.disable': 'Deaktivieren',
   'user.delete': 'Löschen',
   'user.selectUsersFirst': 'Bitte wählen Sie zuerst Benutzer zum Löschen aus',
+  'user.selectUsersToDisable': 'Bitte wählen Sie Benutzer zum Deaktivieren aus',
+  'user.selectUsersToEnable': 'Bitte wählen Sie Benutzer zum Aktivieren aus',
   'user.confirmDeleteSelected': 'Sind Sie sicher, dass Sie {count} ausgewählte Benutzer löschen möchten?',
   'user.deleting': 'Löscht...',
   'user.deleteSuccess': 'Erfolgreich {count} Benutzer gelöscht',
@@ -704,6 +709,9 @@ export default {
   'common.cancel': 'Abbrechen',
   'common.sensitive': 'Sensibel',
   'common.loading': 'Lädt',
+  'common.copySuccess': 'Erfolgreich kopiert',
+  'common.copyFailed': 'Kopieren fehlgeschlagen',
+  'common.copyAddress': 'Adresse kopieren',
 
   // Language switch
   'language.zhCN': '中文简体',
@@ -1116,6 +1124,8 @@ export default {
   'agentTemplateManagement.action': 'Aktion',
   'agentTemplateManagement.createTemplate': 'Vorlage erstellen',
   'templateQuickConfig.newTemplate': 'Neue Vorlage',
+  'templateQuickConfig.editTemplate': 'Vorlage bearbeiten',
+  'templateQuickConfig.addTemplate': 'Vorlage hinzufügen',
   'agentTemplateManagement.editTemplate': 'Vorlage bearbeiten',
   'agentTemplateManagement.deleteTemplate': 'Vorlage löschen',
   'agentTemplateManagement.deleteSuccess': 'Vorlage erfolgreich gelöscht',
@@ -1420,8 +1430,6 @@ export default {
   'featureManagement.groupDescription.featureManagement': 'Aktivierungsstatus der Kernfunktionsmodule steuern',
   'featureManagement.groupDescription.voiceManagement': 'Konfigurieren, welche Funktionen für Agenten (KI-Assistenten) sichtbar und verfügbar sind',
   'featureManagement.moduleCount': '{count} Module insgesamt',
-  'featureManagement.enabled': 'Aktiviert',
-  'featureManagement.disabled': 'Deaktiviert',
 
   // Feature names and descriptions
   'feature.voiceprintRecognition.name': 'Stimmerkennung',

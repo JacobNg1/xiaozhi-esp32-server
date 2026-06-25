@@ -352,6 +352,8 @@ export default {
 
   // 替换词对话框相关
   'replacementWordManagement.pageTitle': '替换词管理',
+  'replacementWordManagement.searchPlaceholder': '请输入文件名称查询',
+  'replacementWordManagement.search': '搜索',
   'replacementWordManagement.fileName': '文件名称',
   'replacementWordManagement.replacementWordCount': '替换词数量',
   'replacementWordManagement.replacementWordContent': '替换词内容',
@@ -591,6 +593,7 @@ export default {
 
   // 字典管理页面文本
   'dictManagement.pageTitle': '字典管理',
+  'dictManagement.dictTypeCategory': '字典分类',
   'dictManagement.searchPlaceholder': '请输入字典值标签查询',
   'dictManagement.search': '搜索',
   'dictManagement.dictTypeName': '字典类型名称',
@@ -645,6 +648,8 @@ export default {
   'user.disable': '禁用',
   'user.delete': '删除',
   'user.selectUsersFirst': '请先选择需要删除的用户',
+  'user.selectUsersToDisable': '请选择要禁用的用户',
+  'user.selectUsersToEnable': '请选择要启用的用户',
   'user.confirmDeleteSelected': '确定要删除选中的{count}个用户吗？',
   'user.deleting': '正在删除中...',
   'user.deleteSuccess': '成功删除{count}个用户',
@@ -704,6 +709,9 @@ export default {
   'common.cancel': '取消',
   'common.sensitive': '敏感',
   'common.loading': '加载中',
+  'common.copySuccess': '复制成功',
+  'common.copyFailed': '复制失败',
+  'common.copyAddress': '复制地址',
 
   // 语言切换
   'language.zhCN': '中文简体',
@@ -1150,6 +1158,8 @@ export default {
   'templateQuickConfig.cancel': '取消',
   'templateQuickConfig.templateNotFound': '未找到指定模板',
   'templateQuickConfig.newTemplate': '新模板',
+  'templateQuickConfig.editTemplate': '编辑模板',
+  'templateQuickConfig.addTemplate': '新增模板',
   'warning': '警告',
   'info': '提示',
   'common.networkError': '网络请求失败',
@@ -1418,8 +1428,6 @@ export default {
   'featureManagement.groupDescription.featureManagement': '控制系统核心功能模块的启用状态',
   'featureManagement.groupDescription.voiceManagement': '配置哪些功能对智能体（AI助手）可见和可用',
   'featureManagement.moduleCount': '共 {count} 个模块',
-  'featureManagement.enabled': '已启用',
-  'featureManagement.disabled': '未启用',
 
   // 功能名称和描述
   'feature.voiceprintRecognition.name': '声纹识别',

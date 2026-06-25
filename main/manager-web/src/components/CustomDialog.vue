@@ -13,27 +13,30 @@
     @open="handleOpen"
   >
     <template slot="title">
-      <div class="dialog-title">
-        <img src="@/assets/knowledge-base/level.png" class="title-icon" />
-        <span>{{ title }}</span>
-      </div>
+      <slot name="title">
+        <div class="dialog-title">
+          <img src="@/assets/knowledge-base/level.png" class="title-icon" />
+          <span>{{ title }}</span>
+        </div>
+      </slot>
     </template>
     <slot></slot>
     <template slot="footer">
       <div v-if="footer" class="dialog-footer">
-        <el-button @click="handleCancel">{{ cancelText }}</el-button>
-        <el-button :loading="confirmLoading" type="primary" @click="handleConfirm">
+        <CustomButton @click="handleCancel">{{ cancelText }}</CustomButton>
+        <CustomButton :loading="confirmLoading" type="confirm" @click="handleConfirm">
           <span class="confirm-inner">
             <img src="@/assets/knowledge-base/star.png" class="confirm-icon" />
             {{ confirmText }}
           </span>
-        </el-button>
+        </CustomButton>
       </div>
     </template>
   </el-dialog>
 </template>
 
 <script>
+import CustomButton from './CustomButton.vue';
 export default {
   name: "CustomDialog",
   props: {
@@ -91,6 +94,9 @@ export default {
       dialogVisible: this.visible
     };
   },
+  components: {
+    CustomButton
+  },
   watch: {
     visible(val) {
       this.dialogVisible = val;
@@ -123,7 +129,6 @@ export default {
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 15vh !important;
   }
 
   ::v-deep .el-dialog__header {
@@ -195,7 +200,6 @@ export default {
   .dialog-footer {
     display: flex;
     justify-content: flex-end;
-    gap: 12px;
 
     .el-button {
       padding: 10px 20px;

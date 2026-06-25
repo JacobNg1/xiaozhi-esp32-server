@@ -352,6 +352,8 @@ export default {
 
   // Replacement word management page related
   'replacementWordManagement.pageTitle': 'Gerenciamento de Palavras de Substituição',
+  'replacementWordManagement.searchPlaceholder': 'Digite o nome do arquivo para pesquisar',
+  'replacementWordManagement.search': 'Pesquisar',
   'replacementWordManagement.fileName': 'Nome do Arquivo',
   'replacementWordManagement.replacementWordCount': 'Quantidade de Palavras de Substituição',
   'replacementWordManagement.replacementWordContent': 'Conteúdo Substituto',
@@ -591,6 +593,7 @@ export default {
 
   // Página de gerenciamento de dicionário
   'dictManagement.pageTitle': 'Gerenciamento de Dicionário',
+  'dictManagement.dictTypeCategory': 'Categoria do Dicionário',
   'dictManagement.searchPlaceholder': 'Por favor, insira o rótulo do dicionário para pesquisar',
   'dictManagement.search': 'Pesquisar',
   'dictManagement.dictTypeName': 'Nome do Tipo de Dicionário',
@@ -645,6 +648,8 @@ export default {
   'user.disable': 'Desativar',
   'user.delete': 'Excluir',
   'user.selectUsersFirst': 'Por favor, selecione usuários para excluir primeiro',
+  'user.selectUsersToDisable': 'Por favor, selecione usuários para desativar',
+  'user.selectUsersToEnable': 'Por favor, selecione usuários para ativar',
   'user.confirmDeleteSelected': 'Tem certeza de que deseja excluir {count} usuários selecionados?',
   'user.deleting': 'Excluindo...',
   'user.deleteSuccess': '{count} usuários excluídos com sucesso',
@@ -704,6 +709,9 @@ export default {
   'common.cancel': 'Cancelar',
   'common.sensitive': 'Sensível',
   'common.loading': 'Carregando',
+  'common.copySuccess': 'Cópia bem-sucedida',
+  'common.copyFailed': 'Falha ao copiar',
+  'common.copyAddress': 'Copiar endereço',
 
   // Troca de idioma
   'language.zhCN': '中文简体',
@@ -1150,6 +1158,8 @@ export default {
   'templateQuickConfig.cancel': 'Cancelar',
   'templateQuickConfig.templateNotFound': 'Modelo não encontrado',
   'templateQuickConfig.newTemplate': 'Novo Modelo',
+  'templateQuickConfig.editTemplate': 'Editar Modelo',
+  'templateQuickConfig.addTemplate': 'Adicionar Modelo',
   'warning': 'Aviso',
   'info': 'Informação',
   'common.networkError': 'Falha na requisição de rede',
@@ -1420,8 +1430,6 @@ export default {
   'featureManagement.groupDescription.featureManagement': 'Controlar o status de ativação dos módulos de funcionalidade principal',
   'featureManagement.groupDescription.voiceManagement': 'Configurar quais funcionalidades são visíveis e disponíveis para agentes (assistentes de IA)',
   'featureManagement.moduleCount': '{count} módulos no total',
-  'featureManagement.enabled': 'Ativado',
-  'featureManagement.disabled': 'Desativado',
 
   // Nomes e descrições de funcionalidades
   'feature.voiceprintRecognition.name': 'Reconhecimento de Impressão Vocal',

@@ -141,11 +141,9 @@
                 <p class="section-desc">{{ $t('addressBookManagement.setPermissionDesc', { count: selectedPermissions.length }) }}</p>
               </div>
               <div class="section-actions">
-                <el-button size="small" @click="handleCancel">{{ $t('common.cancel') }}</el-button>
-                <el-button size="small" @click="handleToggleSelectAll">
-                  {{ isAllSelected ? $t('addressBookManagement.deselectAll') : $t('addressBookManagement.selectAll') }}
-                </el-button>
-                <el-button type="primary" size="small" @click="handleSavePermissions">{{ $t('addressBookManagement.save') }}</el-button>
+                <CustomButton size="small" @click="handleCancel">{{ $t('common.cancel') }}</CustomButton>
+                <CustomButton size="small" @click="handleToggleSelectAll">{{ isAllSelected ? $t('addressBookManagement.deselectAll') : $t('addressBookManagement.selectAll') }}</CustomButton>
+                <CustomButton type="confirm" size="small" @click="handleSavePermissions">{{ $t('addressBookManagement.save') }}</CustomButton>
               </div>
             </div>
 
@@ -208,10 +206,11 @@ import VersionFooter from "@/components/VersionFooter.vue";
 import Api from "@/apis/api.js";
 import AddressBookApi from "@/apis/module/addressBook.js";
 import MacAddressMask from "@/components/MacAddressMask.vue";
+import CustomButton from "@/components/CustomButton.vue";
 
 export default {
   name: "AddressBookManagement",
-  components: { HeaderBar, VersionFooter, MacAddressMask },
+  components: { HeaderBar, VersionFooter, MacAddressMask, CustomButton },
   data() {
     return {
       searchKeyword: "",
@@ -282,7 +281,7 @@ export default {
                   remarks: device.alias || '',
                   online: false,
                   createDate: device.createDate,
-                  lastConnectedAt: device.lastConnectedAt,
+                  lastConnectedAt: device.lastConnectedAtTimestamp,
                   deviceStatus: 'offline'
                 }));
                 resolve();
@@ -290,8 +289,11 @@ export default {
             });
           });
           Promise.all(agentPromises).then(() => {
+            const firstDevice = agentList[0] || {};
             this.agentDeviceOptions = agentList;
             this.filteredAgents = agentList;
+            // 默认选中第一项
+            this.handleDeviceClick(firstDevice.devices?.[0] || {}, firstDevice);
             // 获取设备状态
             this.fetchDeviceStatus();
           });
@@ -346,17 +348,6 @@ export default {
           device.deviceStatus = 'offline';
         }
       });
-    },
-    handleAgentClick(agent) {
-      if (this.expandedAgentId === agent.id) {
-        this.expandedAgentId = null;
-        this.selectedAgent = null;
-        this.selectedDevice = null;
-      } else {
-        this.expandedAgentId = agent.id;
-        this.selectedAgent = agent;
-        this.selectedDevice = null;
-      }
     },
     handleDeviceClick(device, agent) {
       this.expandedAgentId = agent.id;
@@ -537,7 +528,7 @@ export default {
     getTimeAgo(timestamp) {
       if (!timestamp) return '-';
       const now = new Date();
-      const date = new Date(timestamp);
+      const date = new Date(Number(timestamp));
       const diff = now - date;
 
       const seconds = Math.floor(diff / 1000);
@@ -954,8 +945,8 @@ export default {
     }
 
     .section-actions {
+      margin-top: 4px;
       display: flex;
-      gap: 8px;
     }
   }
 }
